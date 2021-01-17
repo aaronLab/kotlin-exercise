@@ -1,5 +1,7 @@
 # VALIDATION
 
+- gradle
+  - `implementation("org.springframework.boot:spring-boot-starter-validation")`
 - [참고](https://beanvalidation.org/2.0/spec/)
 - 데이터 클래스에는 @field:Name을 사용함
 - Validated: 컨트롤러 단위 검증
