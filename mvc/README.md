@@ -2,4 +2,4 @@
 with SpringBoot in Kotlin
 
 ## Index
-- [GET]("./Docs/GET.md")
+- [GET](./Docs/GET.md)
