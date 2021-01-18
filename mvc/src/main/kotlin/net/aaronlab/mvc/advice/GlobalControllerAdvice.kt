@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestControllerAdvice
 /*
 아래 어노테이션에 적용된 모든 곳에 동작
  */
-@RestControllerAdvice
+//@RestControllerAdvice
 class GlobalControllerAdvice {
 
     @ExceptionHandler(value = [RuntimeException::class])
