@@ -2,10 +2,13 @@ package net.aaronlab.first_request_exercise.controllers.get
 
 import net.aaronlab.first_request_exercise.models.UserRequest
 import org.springframework.http.ResponseEntity
+import org.springframework.validation.annotation.Validated
 import org.springframework.web.bind.annotation.*
+import javax.validation.constraints.Min
 
 @RestController
 @RequestMapping(path = ["/api/get"])
+@Validated
 class GetController {
     /*
     기본 GET
@@ -63,7 +66,10 @@ class GetController {
     @GetMapping("/response/object")
     fun responseString(
         @RequestParam name: String,
-        @RequestParam age: Int
+
+        @RequestParam
+        @Min(value = 20)
+        age: Int
     ): ResponseEntity<UserRequest> {
         val userRequest = UserRequest()
         userRequest.apply {
