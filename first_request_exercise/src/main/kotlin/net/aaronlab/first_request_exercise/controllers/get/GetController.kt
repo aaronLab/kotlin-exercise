@@ -1,6 +1,7 @@
 package net.aaronlab.first_request_exercise.controllers.get
 
 import net.aaronlab.first_request_exercise.models.UserRequest
+import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
 
 @RestController
@@ -46,6 +47,30 @@ class GetController {
         val phoneNumber = map["phone-number"]
         println(phoneNumber)
         return map
+    }
+
+    /*
+    ResponseEntity with String
+     */
+    @GetMapping("/response/string")
+    fun responseString(@RequestParam name: String): ResponseEntity<String> {
+        return ResponseEntity.ok("string")
+    }
+
+    /*
+    ResponseEntity with Object
+     */
+    @GetMapping("/response/object")
+    fun responseString(
+        @RequestParam name: String,
+        @RequestParam age: Int
+    ): ResponseEntity<UserRequest> {
+        val userRequest = UserRequest()
+        userRequest.apply {
+            this.name = name
+            this.age = age
+        }
+        return ResponseEntity.ok(userRequest)
     }
 
 }
