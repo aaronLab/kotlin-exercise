@@ -1,4 +1,4 @@
-package net.aaronlab.first.controller
+package net.aaronlab.first.controller.get
 
 import net.aaronlab.first.model.http.UserRequest
 import org.springframework.web.bind.annotation.*
