@@ -20,14 +20,6 @@ class ResponseApiController {
             return ResponseEntity.status(400).body("no age")
         }
 
-//        if (age == null) {
-//            return ResponseEntity.status(400).body("no age")
-//        }
-//
-//        if (age < 20) {
-//            return ResponseEntity.status(400).body("should be more than 19")
-//        }
-
         return ResponseEntity.ok("OK")
     }
 
